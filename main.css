@@ -1,11 +1,191 @@
-.cross {
+#heleKruis {
     height: 45em;
+    animation: bounceCross;
+    animation-delay: 5s;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
 }
 
-div {
-    text-align: center;
+@keyframes bounceCross {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 body {
     background-color: #ecedea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#ondersteBlok {
+    opacity: 0;
+    animation: appearEen;
+    animation-delay: 0s;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes appearEen {
+    0% {
+        opacity: 0;
+        transform: translateY(-45em);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#derdeBlok {
+    opacity: 0;
+    animation: appearEen;
+    animation-delay: 1s;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes appearTwee {
+    0% {
+        opacity: 0;
+        transform: translateY(-45em);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#tweedeBlok {
+    opacity: 0;
+    animation: appearEen;
+    animation-delay: 2s;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes appearDrie {
+    0% {
+        opacity: 0;
+        transform: translateY(-45em);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#eersteBlok {
+    opacity: 0;
+    animation: appearEen;
+    animation-delay: 3s;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes appearVier {
+    0% {
+        opacity: 0;
+        transform: translateY(-45em);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#linkerBlok {
+    opacity: 0;
+    animation: appearEen;
+    animation-delay: 4s;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes appearVijf {
+    0% {
+        opacity: 0;
+        transform: translateX(-45em);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+#rechterBlok {
+    opacity: 0;
+    animation: appearEen;
+    animation-delay: 4s;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes appearZes {
+    0% {
+        opacity: 0;
+        transform: translateX(-45em);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.zoomIn {
+    animation: animateIn;
+    animation-delay: 0s;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: infinite;
+}
+
+@keyframes animateIn {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(10);
+    }
+}
+
+.zoomOut {
+    animation: animateOut;
+    animation-delay: 0s;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: infinite;
+}
+
+@keyframes animateOut {
+    0% {
+        transform: scale(10);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
