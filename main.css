@@ -1,25 +1,4 @@
-#heleKruis {
-    height: 45em;
-    animation: bounceCross;
-    animation-delay: 5s;
-    animation-duration: 0.5s;
-    animation-timing-function: ease-in;
-    animation-fill-mode: forwards;
-}
-
-@keyframes bounceCross {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.1);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
+/*  O R I G I N E L E  S T A T E  */
 
 body {
     background-color: #ecedea;
@@ -28,11 +7,64 @@ body {
     align-items: center;
 }
 
-#ondersteBlok {
+body.heleBody {
+    transition-property: background-color;
+    transition-property: filter;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
+
+body > svg.heleKruis {
+    height: 45em;
+    transition: ease;
+    transform: rotate(0deg);
+}
+
+.st0 {
+    fill: #D81416;
+    transition-property: fill;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
+
+.st1 {
+    fill: #F18400;
+    transition-property: fill;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
+
+.st2 {
+    fill: #FCE900;
+    transition-property: fill;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
+
+.st3 {
+    fill: #318A35;
+    transition-property: fill;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
+
+.st4 {
+    fill: #09101C;
+    transition-property: fill;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
+
+
+
+
+/*  A L L E  B L O K K E N  I N L A D E N  */
+
+svg > g:nth-of-type(4) {
     opacity: 0;
     animation: appearEen;
     animation-delay: 0s;
-    animation-duration: 0.5s;
+    animation-duration: 100ms;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
 }
@@ -49,11 +81,11 @@ body {
     }
 }
 
-#derdeBlok {
+svg > g:nth-of-type(3) {
     opacity: 0;
     animation: appearEen;
-    animation-delay: 1s;
-    animation-duration: 0.5s;
+    animation-delay: 100ms;
+    animation-duration: 100ms;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
 }
@@ -70,11 +102,11 @@ body {
     }
 }
 
-#tweedeBlok {
+svg > g:nth-of-type(2) {
     opacity: 0;
     animation: appearEen;
-    animation-delay: 2s;
-    animation-duration: 0.5s;
+    animation-delay: 200ms;
+    animation-duration: 100ms;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
 }
@@ -91,11 +123,11 @@ body {
     }
 }
 
-#eersteBlok {
+svg > g:nth-of-type(1) {
     opacity: 0;
     animation: appearEen;
-    animation-delay: 3s;
-    animation-duration: 0.5s;
+    animation-delay: 300ms;
+    animation-duration: 100ms;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
 }
@@ -112,11 +144,11 @@ body {
     }
 }
 
-#linkerBlok {
+svg > g:nth-of-type(6) {
     opacity: 0;
     animation: appearEen;
-    animation-delay: 4s;
-    animation-duration: 0.5s;
+    animation-delay: 400ms;
+    animation-duration: 100ms;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
 }
@@ -124,7 +156,7 @@ body {
 @keyframes appearVijf {
     0% {
         opacity: 0;
-        transform: translateX(-45em);
+        transform: translateX(-25em)
     }
 
     100% {
@@ -133,11 +165,11 @@ body {
     }
 }
 
-#rechterBlok {
+svg > g:nth-of-type(5) {
     opacity: 0;
     animation: appearEen;
-    animation-delay: 4s;
-    animation-duration: 0.5s;
+    animation-delay: 400ms;
+    animation-duration: 100ms;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
 }
@@ -145,7 +177,7 @@ body {
 @keyframes appearZes {
     0% {
         opacity: 0;
-        transform: translateX(-45em);
+        transform: translateX(25em)
     }
 
     100% {
@@ -154,38 +186,215 @@ body {
     }
 }
 
-.zoomIn {
-    animation: animateIn;
-    animation-delay: 0s;
-    animation-duration: 1s;
+
+
+
+/*  K E Y D O W N "I":  I N V E R T  */
+
+.invert {
+    filter: invert(100%);
+    background-color: #3C3C3B;
+    transition-property: background-color;
+    transition-property: filter;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
+
+
+
+
+/*  B U T T O N S  */
+
+body > button {
+    position: absolute;
+    margin-top: -7.4em;
+    background: #F18400;
+    padding: 1em 1em;
+    color: #09101C;
+    font-family: "Montserrat";
+    font-style: bold;
+    text-transform: uppercase;
+    border-color: #D81416;
+    border-style: solid;
+    border-width: 6px;
+    transition-property: border-color;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    opacity: 0;
+    animation: appearButtons;
+    animation-delay: 600ms;
+    animation-duration: 100ms;
     animation-timing-function: ease-out;
-    animation-fill-mode: infinite;
+    animation-fill-mode: forwards;
 }
 
-@keyframes animateIn {
+@keyframes appearButtons {
     0% {
-        transform: scale(1);
+        opacity: 0;
+        transform: translateX(-25em);
     }
 
     100% {
-        transform: scale(10);
+        opacity: 1;
+        transform: translateX(0em);
     }
 }
 
-.zoomOut {
-    animation: animateOut;
+body > button.rechts {
+    margin-left: -43em;
+}
+
+body > button.links {
+    margin-left: -48em;
+}
+
+
+body > button:hover {
+    background: #FCE900;
+    border-color: #318A35;
+    transition-property: border-color;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
+
+body > button:focus {
+    background: #FCE900;
+    border-color: #318A35;
+}
+
+
+
+
+/*  H O L Y  S T A T E  */
+
+.st0holy {
+    fill: #FDCD00;
+    transition-property: fill;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
+
+.st1holy {
+    fill: #F6F6F6;
+    transition-property: fill;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
+
+.st2holy {
+    fill: #FDE20B;
+    transition-property: fill;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
+
+.st3holy {
+    fill: #FDCD04;
+    transition-property: fill;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
+
+.st4holy {
+    fill: #FFFFFF;
+    transition-property: fill;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
+
+.heleBodyHoly {
+    background-color: white;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
+
+svg.heleKruisHoly {
+    animation: turnCrossUp;
     animation-delay: 0s;
-    animation-duration: 1s;
-    animation-timing-function: ease-in;
-    animation-fill-mode: infinite;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
 }
 
-@keyframes animateOut {
+@keyframes turnCrossUp {
     0% {
-        transform: scale(10);
+        margin-top: -1em;
+    }
+
+    50% {
+        margin-top: 1em;
     }
 
     100% {
-        transform: scale(1);
+        margin-top: -1em;
     }
+}
+
+
+
+
+/*  E V I L  S T A T E  */
+
+.st0evil {
+    fill: #1D1D1B;
+    transition-property: fill;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
+
+.st1evil {
+    fill: #575756;
+    transition-property: fill;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
+
+.st2evil {
+    fill: #E30613;
+    transition-property: fill;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
+
+.st3evil {
+    fill: #3C3C3B;
+    transition-property: fill;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
+
+.st4evil {
+    fill: #1D1D1B;
+    transition-property: fill;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
+
+svg.heleKruisEvil {
+    animation: turnCrossDown;
+    animation-delay: 0s;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes turnCrossDown {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+.heleBodyEvil {
+    background: radial-gradient(circle, rgba(0, 0, 0, 1) 50%, rgba(190, 22, 34, 1) 100%);
+    transition-property: background;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
 }
