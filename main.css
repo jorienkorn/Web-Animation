@@ -393,8 +393,42 @@ svg.heleKruisEvil {
 }
 
 .heleBodyEvil {
-    background: radial-gradient(circle, rgba(0, 0, 0, 1) 50%, rgba(190, 22, 34, 1) 100%);
-    transition-property: background;
+    background-color: #000000;
+    transition-property: background-color;
     transition-duration: 0.5s;
     transition-timing-function: ease;
 }
+
+
+
+
+/*  R E S P O N S I V E  */
+
+/* Laptop */
+@media (min-width: 70em) {
+    
+}
+
+/* Tablet */
+@media (max-width: 35em) {
+
+    .heleKruis {
+        height: 25em;
+    }
+
+    button {
+        margin-top: 0em;
+        bottom: 0;
+    }
+
+    body > button.rechts {
+        margin-left: -2.5em;
+    }
+
+    body > button.links {
+        margin-left: 2.5em;
+    }
+}
+
+/* Telefoon */
+@media (max-width: 29em) {}
