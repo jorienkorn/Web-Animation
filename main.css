@@ -212,6 +212,7 @@ svg > g:nth-of-type(5) {
 /*  B U T T O N S  */
 
 body > button {
+    z-index: 2;
     position: absolute;
     margin-top: -7.4em;
     background: #F18400;
@@ -419,13 +420,13 @@ svg.heleKruisEvil {
 /* Tablet */
 @media (max-width: 35em) {
 
-    .heleKruis {
+    body > svg.heleKruis {
         margin-top: 1em;
         height: 20em;
     }
 
     button {
-        margin-top: 0em;
+        margin-top: -3em;
         bottom: 1em;
     }
 
