@@ -417,19 +417,19 @@ svg.heleKruisEvil {
 @media only screen and (max-width: 60em) {
     
     body {
-        background-color: black;
+        background-color: blue;
     }
 
     body.heleBody.invert > button.links {
         margin-left: 2.5em;
         margin-top: -3em;
-        bottom: -4em;
+        bottom: -26em;
     }
 
     body.heleBody.invert > button.rechts {
         margin-left: -2.5em;
         margin-top: -3em;
-        bottom: -22em;
+        bottom: -26em;
     }
 
     button {
