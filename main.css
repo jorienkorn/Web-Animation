@@ -422,7 +422,7 @@ svg.heleKruisEvil {
 
     body > button {
         margin-top: 70em;
-        left: 33em;
+        left: 33.2em;
     }
 
     body > button.rechts {
@@ -439,7 +439,7 @@ svg.heleKruisEvil {
 @media only screen and (max-width: 40em) {
 
     body {
-        background-color: violet;
+        background-color: blueviolet;
     }
 
     body > svg.heleKruis {
@@ -463,7 +463,7 @@ svg.heleKruisEvil {
 
     body > button {
         margin-top: 18em;
-        left: 12.5em;
+        left: 12em;
     }
 
     body > button.rechts {
