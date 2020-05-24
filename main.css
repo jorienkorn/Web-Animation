@@ -207,6 +207,11 @@ svg > g:nth-of-type(5) {
     transition-timing-function: ease;
 }
 
+
+
+
+/*  K E Y D O W N "B":  B L E N D  */
+
 .blend {
     mix-blend-mode: color-burn;
 }
