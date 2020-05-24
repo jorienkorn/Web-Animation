@@ -419,6 +419,10 @@ svg.heleKruisEvil {
     body > svg.heleKruis {
         margin-top: 1em;
     }
+    
+    body {
+        background-color: black;
+    }
 
     body > button {
         margin-top: 70em;
