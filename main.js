@@ -42,9 +42,9 @@ function invertMobile() {
         heleBody.classList.toggle('invert');
 }
 
-function blendMobile() {
-        heleBody.classList.toggle('blend');
-}
+//function blendMobile() {
+//        heleBody.classList.toggle('blend');
+//}
 
 
 /*de function die uitgevoerd moet worden voor klik links*/
@@ -93,6 +93,6 @@ function klikRechts() {
 window.addEventListener('keydown', invertDesktop);
 window.addEventListener('keydown', blendDesktop);
 heleKruis.addEventListener('touchstart', invertMobile);
-heleKruis.addEventListener('long-press', blendMobile);
+//heleKruis.addEventListener('long-press', blendMobile);
 buttonLinks.addEventListener('click', klikLinks);
 buttonRechts.addEventListener('click', klikRechts);

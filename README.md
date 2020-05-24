@@ -140,9 +140,9 @@ Voor de desktop staan de knoppen links omdat er veel ruimte is aan de zijkanten 
 Om het responsive te maken heb ik de knoppen van links naar onder het artwork verplaatst. Als het onder het artwork staat, vallen de knoppen binnen de thumbzone voor mobiel en is het makkelijker te gebruiken. Om te kunnen inverten op mobiel heb ik in plaats van een keycode gebruik gemaakt van een ```touchstart``` event. Als je klikt op het scherm wordt de class 'invert' toegevoegd door middel van onderstaande code:
 
 ```
-heleKruis.addEventListener('touchstart', invertMobile1);
+heleKruis.addEventListener('touchstart', invertMobile);
 
-function invertMobile1() {
+function invertMobile() {
         heleBody.classList.toggle('invert');
 }
 ```
