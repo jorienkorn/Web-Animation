@@ -448,6 +448,11 @@ svg.heleKruisEvil {
         left: 11.7em;
     }
 
+    body.heleBody.invert > button {
+        margin-top: 18.5em;
+        left: 11.2em;
+    }
+
     body > button.rechts {
         margin-left: -2.5em;
     }
@@ -455,13 +460,9 @@ svg.heleKruisEvil {
     body > button.links {
         margin-left: 2.5em;
     }
-    
-    body {
-        background-color: blueviolet;
-    }
 
-    
-/*
+
+    /*
 
 
 
