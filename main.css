@@ -418,7 +418,7 @@ svg.heleKruisEvil {
 }
 
 /* Tablet */
-@media (max-width: 35em) {
+@media (min-width: 35em) {
 
     body > svg.heleKruis {
         margin-top: 1em;
