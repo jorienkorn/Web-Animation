@@ -1,5 +1,10 @@
 /*  O R I G I N E L E  S T A T E  */
 
+* {
+    cursor: default;
+/*    scroll-behavior: smooth;*/
+}
+
 body {
     background-color: #ecedea;
     display: flex;
@@ -15,6 +20,7 @@ body.heleBody {
 }
 
 body > svg.heleKruis {
+    z-index: 1;
     height: 45em;
     transition: ease;
     transform: rotate(0deg);
@@ -257,6 +263,7 @@ body > button:hover {
     transition-property: background-color;
     transition-duration: 0.5s;
     transition-timing-function: ease;
+    cursor: pointer;
 }
 
 body > button:focus {
@@ -413,12 +420,13 @@ svg.heleKruisEvil {
 @media (max-width: 35em) {
 
     .heleKruis {
-        height: 25em;
+        margin-top: 1em;
+        height: 20em;
     }
 
     button {
         margin-top: 0em;
-        bottom: 0;
+        bottom: 1em;
     }
 
     body > button.rechts {
