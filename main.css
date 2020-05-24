@@ -421,11 +421,12 @@ svg.heleKruisEvil {
     }
 
     body {
-        background-color: black;
+        background-color: blue;
     }
 
     body > button {
-        margin-top: 40em;
+        margin-top: 60em;
+        left: 5em;
     }
 
     body > button.rechts {
