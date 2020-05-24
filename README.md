@@ -18,15 +18,41 @@ Omdat ik met mijn achtergrondverhaal en intentie van het artwork al afwijk van h
 
 ## SVG maken
 <img src="images/artwork-in-illu.png" height="200px"><img src="images/svg-in-html.png" height="200px">
-Het artwork namaken in Illustrator was vrij makkelijk, het artwork bestaat namelijk alleen maar uit vierkanten. Ik heb ze gegroepeerd per blok en als geheel zodat ik dit in mijn HTML kan gebruiken om specifieke onderdelen aan te roepen. Ik het artwork geexporteerd als SVG-code en dit in mijn HTML bestand geplakt.
+
+Het artwork namaken in Illustrator was vrij makkelijk, het artwork bestaat namelijk alleen maar uit vierkanten. Ik heb ze gegroepeerd per blok en als geheel zodat ik dit in mijn HTML kan gebruiken om specifieke onderdelen aan te roepen. Ik het artwork geëxporteerd als SVG-code en dit in mijn HTML bestand geplakt.
 
 ## Interactie
-* Load/refresh (inladen elementen)
+* Load/refresh de pagina (inladen elementen)
 * Click (holy state)
 * Click (evil state)
 * Keyboard (invert)
 
-### Load/refresh (inladen elementen)
+### Load/refresh de pagina (inladen elementen)
+Omdat ik in Illustrator de blokken had gegroepeerd kon ik deze in CSS aanroepen met ```svg > g:nth-of-type()``` en ze één voor één inladen door ```animation``` en de bijbehorende eigenschappen te gebruiken. Dit heb ik op onderstaande manier gedaan:
+
+```
+svg > g:nth-of-type(3) {
+    opacity: 0;
+    animation: appearEen;
+    animation-delay: 100ms;
+    animation-duration: 100ms;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes appearTwee {
+    0% {
+        opacity: 0;
+        transform: translateY(-45em);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+```
+Zoals je ziet staat eerst de opacity op 0, doordat animation geactiveerd wordt na 100ms verandert de opacity van 0 naar 1 en schuift hij van boven (off-screen) naar beneden door middel van ```transform: translateY```. Zo lijkt het alsof de blokken van boven in de pagina vallen. Van het eerste tot het laatste blok is steeds een grotere delay zodat ze niet allemaal tegelijk ingeladen worden.
 
 ### Click (holy state)
 
@@ -35,6 +61,13 @@ Het artwork namaken in Illustrator was vrij makkelijk, het artwork bestaat namel
 ### Keyboard (invert)
 
 ## Responsive
+
+## Alles wat nieuw was voor mij op een rijtje
+* Met SVG animeren
+* CSS filters (invert)
+* transform: translateX
+* cursor
+* mix-blend-mode
 
 
 # Sources

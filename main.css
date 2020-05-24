@@ -207,6 +207,9 @@ svg > g:nth-of-type(5) {
     transition-timing-function: ease;
 }
 
+.blend {
+    mix-blend-mode: color-burn;
+}
 
 
 

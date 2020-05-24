@@ -13,7 +13,7 @@ var body = document.querySelector("body");
 var i;
 
 
-/*de function die uitgevoerd moet worden voor keyboard*/
+/*de function die uitgevoerd moet worden als I wordt ingedrukt*/
 function invertDesktop(event) {
     if (event.keyCode == 73) {
         console.log(event.keyCode);
@@ -22,6 +22,18 @@ function invertDesktop(event) {
     if (event.keyCode == 79) {
         console.log(event.keyCode);
         heleBody.classList.remove('invert');
+    }
+}
+
+/*de function die uitgevoerd moet worden als B wordt ingedrukt*/
+function blendDesktop(event) {
+    if (event.keyCode == 66) {
+        console.log(event.keyCode);
+        heleBody.classList.add('blend');
+    }
+    if (event.keyCode == 79) {
+        console.log(event.keyCode);
+        heleBody.classList.remove('blend');
     }
 }
 
@@ -79,6 +91,7 @@ function klikRechts() {
 
 /*event definieren en functions startten*/
 window.addEventListener('keydown', invertDesktop);
+window.addEventListener('keydown', blendDesktop);
 heleKruis.addEventListener('touchstart', invertMobile1);
 //heleKruis.addEventListener('touchend', invertMobile2);
 buttonLinks.addEventListener('click', klikLinks);
