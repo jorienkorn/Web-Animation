@@ -424,11 +424,10 @@ svg.heleKruisEvil {
 }
 
 /* Telefoon */
-@media (min-width: 20em) and (max-width: 40em) {
+@media only screen and (max-width: 40em) {
 
     body {
         background-color: aqua;
-        width: 22em;
     }
 
     body > svg.heleKruis {
