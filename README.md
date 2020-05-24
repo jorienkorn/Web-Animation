@@ -26,8 +26,10 @@ Het artwork namaken in Illustrator was vrij makkelijk, het artwork bestaat namel
 * Click (holy state)
 * Click (evil state)
 * Keyboard (invert)
+* Keyboard (mix-blend-mode)
 
 ### Load/refresh de pagina (inladen elementen)
+<img src="images/artwork-original.jpg" height="200px">
 Omdat ik in Illustrator de blokken had gegroepeerd kon ik deze in CSS aanroepen met ```svg > g:nth-of-type()``` en ze één voor één inladen door ```animation``` en de bijbehorende eigenschappen te gebruiken. Dit heb ik op onderstaande manier gedaan:
 
 ```
@@ -52,13 +54,48 @@ svg > g:nth-of-type(3) {
     }
 }
 ```
-Zoals je ziet staat eerst de opacity op 0, doordat animation geactiveerd wordt na 100ms verandert de opacity van 0 naar 1 en schuift hij van boven (off-screen) naar beneden door middel van ```transform: translateY```. Zo lijkt het alsof de blokken van boven in de pagina vallen. Van het eerste tot het laatste blok is steeds een grotere delay zodat ze niet allemaal tegelijk ingeladen worden.
+
+Zoals je ziet staat eerst de opacity op 0, doordat animation geactiveerd wordt na 100ms verandert de opacity van 0 naar 1 en schuift hij van boven (off-screen) naar beneden door middel van ```transform: translateY```. Zo lijkt het alsof de blokken van boven in de pagina vallen. Van het eerste tot het laatste blok is er steeds een grotere delay zodat ze niet allemaal tegelijk ingeladen worden maar na elkaar vallen.
 
 ### Click (holy state)
+<img src="images/artwork-holy.jpg" height="200px">
+ 
+Om deze state te activeren heb ik een knop, door middel van semantisch gebruik aan ```<button></button>```, aangemaakt met een pijl die omhoog wijst. Zodra je hierop klikt wordt de volgende JavaScript code gelanceert:
+
+```
+function klikRechts() {
+    console.log('rechter knop');
+    for (i = 0; i < rect.length; i++) {
+        if (rect[i].classList.contains('st0')) {
+            rect[i].classList.toggle('st0holy');
+        } else if (rect[i].classList.contains('st1')) {
+            rect[i].classList.toggle('st1holy');
+        } else if (rect[i].classList.contains('st2')) {
+            rect[i].classList.toggle('st2holy');
+        } else if (rect[i].classList.contains('st3')) {
+            rect[i].classList.toggle('st3holy');
+        } else if (rect[i].classList.contains('st4')) {
+            rect[i].classList.toggle('st4holy');
+        }
+    }
+    
+    heleKruis.classList.toggle('heleKruisHoly');
+    body.classList.toggle('heleBodyHoly');
+}
+```
+
+In deze function wordt een for loop geactiveerd, deze gaat de hele array aan rectangles die in de HTML staan na. De loop kijkt of de rectangles de class 'st0', 'st1', 'st2', 'st3' of 'st4' bevat en zo ja, vervangt hij deze met de bijbehorende nieuwe class. In CSS staat voor elke class een andere fill aangegeven die past bij het thema en deze wordt vervangen met een ```transition-timing-function: ease``` zodat het smooth verloopt van de ene naar de andere kleur.
+
+Hiernaast wordt ook de body aangeroepen om in CSS van achtergrond kleur te veranderen die past bij het thema en door heleKruishHoly aan te roepen activeert het een class met een animation die gebruik maakt van ```@keyframes``` om de indruk te geven dat het kruis zweeft, dit heb ik simpelweg met ```margin-top``` gedaan.
 
 ### Click (evil state)
+<img src="images/artwork-evil.jpg" height="200px">
+ 
+Voor deze state geldt voor het grootste gedeelte hetzelfde als wat hierboven staat. Het verschil zit hem hier in dat deze state niet zweeft maar zich omdraait door middel van ```transform: rotate(180deg);```. Het is een nodd naar de horrorfilms waar een omgedraaid kruis als kwaad wordt gezien, daarom past dit goed bij de evil versie. Ook dit wordt gedaan in ```@keyframes```.
 
 ### Keyboard (invert)
+
+### Keyboard (mix-blend-mode)
 
 ## Responsive
 
