@@ -428,6 +428,7 @@ svg.heleKruisEvil {
 
     body {
         background-color: aqua;
+        width: 20em;
     }
 
     body > svg.heleKruis {
