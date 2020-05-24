@@ -11,6 +11,7 @@ body {
     justify-content: center;
     align-items: center;
     overflow-y: hidden;
+    min-width: 65em;
 }
 
 body.heleBody {
@@ -207,6 +208,12 @@ svg > g:nth-of-type(5) {
     transition-timing-function: ease;
 }
 
+
+g:hover {
+    transform-origin: center;
+    transition-property: padding;
+    padding: 0.5em;
+}
 
 
 
@@ -414,10 +421,32 @@ svg.heleKruisEvil {
 /*  R E S P O N S I V E  */
 
 /* Laptop */
-@media (min-width: 70em) {}
+@media (min-width: 65em) {
+    body {
+        background-color: #ecedea;
+    }
+
+    body > svg.heleKruis {
+        margin-top: 0em;
+        height: 45em;
+    }
+
+    button {
+        margin-top: -7.4em;
+    }
+
+    body > button.rechts {
+        margin-left: -43em;
+    }
+
+    body > button.links {
+        margin-left: -48em;
+    }
+}
+}
 
 /* Tablet */
-@media (min-width: 60em) (max-width: 70em) {
+@media (min-width: 30em) and (max-width: 65em) {
 
     body {
         background-color: #36A9E1;
@@ -443,7 +472,7 @@ svg.heleKruisEvil {
 }
 
 /* Telefoon */
-@media (min-width: 20em) (max-width: 40em) {
+@media (max-width: 30em) {
 
     body {
         background-color: #2D2E83;
