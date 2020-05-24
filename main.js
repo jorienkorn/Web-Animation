@@ -25,14 +25,14 @@ function invertDesktop(event) {
     }
 }
 
-/*de function die uitgevoerd moet worden voor keyboard*/
+/*de function die uitgevoerd moet worden voor touch screens*/
 function invertMobile1() {
-        heleBody.classList.add('invert');
+        heleBody.classList.toggle('invert');
 }
 
-function invertMobile2() {
-        heleBody.classList.remove('invert');
-}
+//function invertMobile2() {
+//        heleBody.classList.remove('invert');
+//}
 
 
 /*de function die uitgevoerd moet worden voor klik links*/
@@ -77,9 +77,9 @@ function klikRechts() {
     body.classList.toggle('heleBodyHoly');
 }
 
-/*event definieren en function startten*/
+/*event definieren en functions startten*/
 window.addEventListener('keydown', invertDesktop);
-window.addEventListener('touchstart', invertMobile1);
-window.addEventListener('touchend', invertMobile2);
+heleKruis.addEventListener('touchstart', invertMobile1);
+//heleKruis.addEventListener('touchend', invertMobile2);
 buttonLinks.addEventListener('click', klikLinks);
 buttonRechts.addEventListener('click', klikRechts);
