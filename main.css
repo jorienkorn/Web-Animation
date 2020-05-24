@@ -420,10 +420,6 @@ svg.heleKruisEvil {
         margin-top: 1em;
     }
 
-    body {
-        background-color: blue;
-    }
-
     body > button {
         margin-top: 70em;
         left: 33em;
@@ -441,6 +437,10 @@ svg.heleKruisEvil {
 
 /* Telefoon */
 @media only screen and (max-width: 40em) {
+
+    body {
+        background-color: violet;
+    }
 
     body > svg.heleKruis {
         margin-top: 1em;
@@ -461,13 +461,9 @@ svg.heleKruisEvil {
     }
 */
 
-    body {
-        background-color: blue;
-    }
-
     body > button {
-        margin-top: 17em;
-        left: 11.5em;
+        margin-top: 18em;
+        left: 12.5em;
     }
 
     body > button.rechts {
