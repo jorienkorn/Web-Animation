@@ -2,7 +2,7 @@
 
 * {
     cursor: default;
-/*    scroll-behavior: smooth;*/
+    /*    scroll-behavior: smooth;*/
 }
 
 body {
@@ -10,6 +10,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow-y: hidden;
 }
 
 body.heleBody {
@@ -413,13 +414,15 @@ svg.heleKruisEvil {
 /*  R E S P O N S I V E  */
 
 /* Laptop */
-@media (min-width: 70em) {
-    
-}
+@media (min-width: 70em) {}
 
 /* Tablet */
 @media (min-width: 60em) (max-width: 70em) {
-    
+
+    body {
+        background-color: #36A9E1;
+    }
+
     body > svg.heleKruis {
         margin-top: 1em;
         height: 35em;
@@ -442,6 +445,10 @@ svg.heleKruisEvil {
 /* Telefoon */
 @media (min-width: 20em) (max-width: 40em) {
 
+    body {
+        background-color: #2D2E83;
+    }
+
     body > svg.heleKruis {
         margin-top: 1em;
         height: 22em;
@@ -460,5 +467,3 @@ svg.heleKruisEvil {
         margin-left: 2.5em;
     }
 }
-
-
