@@ -427,7 +427,7 @@ svg.heleKruisEvil {
 @media only screen and (max-width: 40em) {
 
     body {
-        background-color: aqua;
+        background-color: blueviolet;
     }
 
     body > svg.heleKruis {
