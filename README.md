@@ -55,7 +55,7 @@ svg > g:nth-of-type(3) {
 }
 ```
 
-Zoals je ziet staat eerst de opacity op 0, doordat animation geactiveerd wordt na 100ms verandert de opacity van 0 naar 1 en schuift hij van boven (off-screen) naar beneden door middel van ```transform: translateY```. Zo lijkt het alsof de blokken van boven in de pagina vallen. Van het eerste tot het laatste blok is er steeds een grotere delay zodat ze niet allemaal tegelijk ingeladen worden maar na elkaar vallen.
+Zoals je ziet staat eerst de opacity op 0, doordat de ```animation``` geactiveerd wordt na 100ms verandert de opacity van 0 naar 1 en schuift hij van boven (off-screen) naar beneden door middel van ```transform: translateY```. Zo lijkt het alsof de blokken van boven in de pagina vallen. Van het eerste tot het laatste blok is er steeds een grotere delay zodat ze niet allemaal tegelijk ingeladen worden maar na elkaar vallen.
 
 ### Click (holy state)
 <img src="images/artwork-holy.jpg" height="200px">
@@ -86,7 +86,7 @@ function klikRechts() {
 
 In deze function wordt een for loop geactiveerd, deze gaat de hele array aan rectangles die in de HTML staan na. De loop kijkt of de rectangles de class 'st0', 'st1', 'st2', 'st3' of 'st4' bevat en zo ja, vervangt hij deze met de bijbehorende nieuwe class. In CSS staat voor elke class een andere fill aangegeven die past bij het thema en deze wordt vervangen met een ```transition-timing-function: ease``` zodat het smooth verloopt van de ene naar de andere kleur.
 
-Hiernaast wordt ook de body aangeroepen om in CSS van achtergrond kleur te veranderen die past bij het thema en door heleKruishHoly aan te roepen activeert het een class met een animation die gebruik maakt van ```@keyframes``` om de indruk te geven dat het kruis zweeft, dit heb ik simpelweg met ```margin-top``` gedaan.
+Hiernaast wordt ook de body aangeroepen om in CSS van achtergrond kleur te veranderen die past bij het thema en door heleKruisHoly aan te roepen activeert het een class met een animation die gebruik maakt van ```@keyframes``` om de indruk te geven dat het kruis zweeft, dit heb ik simpelweg met ```margin-top``` gedaan.
 
 ### Click (evil state)
 <img src="images/artwork-evil.jpg" height="200px">
@@ -94,8 +94,29 @@ Hiernaast wordt ook de body aangeroepen om in CSS van achtergrond kleur te veran
 Voor deze state geldt voor het grootste gedeelte hetzelfde als wat hierboven staat. Het verschil zit hem hier in dat deze state niet zweeft maar zich omdraait door middel van ```transform: rotate(180deg);```. Het is een nodd naar de horrorfilms waar een omgedraaid kruis als kwaad wordt gezien, daarom past dit goed bij de evil versie. Ook dit wordt gedaan in ```@keyframes```.
 
 ### Keyboard (invert)
+<img src="images/invert-original.png" height="200px"><img src="images/invert-holy.png" height="200px"><img src="images/invert-evil.png" height="200px">
+
+Om nog een kleuren thema toetevoegen ging ik kijken naar CSS filters, ik vond invert leuk en heb deze gebruikt. Als je op je toetsenbord op I klikt wordt de volgende JavaScript code gelanceert: 
+
+```
+function invertDesktop(event) {
+    if (event.keyCode == 73) {
+        console.log(event.keyCode);
+        heleBody.classList.add('invert');
+    }
+    if (event.keyCode == 79) {
+        console.log(event.keyCode);
+        heleBody.classList.remove('invert');
+    }
+}
+```
+
+Hier kijkt de code naar of de keycode overeen komt met de keycode van de I of de O, als hij overeen komt met de I wordt de class 'invert' toegevoegd. Deze class zorgt ervoor dat het filter geactiveerd wordt en deze komt over de hele pagina heen. Als de keycode overeen komt met de O wordt de class 'invert' verwijdert en gaat hij dus weer terug naar het de originele kleuren.
 
 ### Keyboard (mix-blend-mode)
+<img src="images/mixblendmode.png" height="200px">
+
+Naast filters had ik ook nog nooit gebruik gemaakt van ```mix-blend-mode```, hiervan vond ik ```color-burn``` het meest onderscheidend van wat ik al had en heb ik daarom voor die gekozen. Dit wordt met dezelfde code geactiveerd als die hierboven staat alleen moet je dan de letter 'B' klikken.
 
 ## Responsive
 
