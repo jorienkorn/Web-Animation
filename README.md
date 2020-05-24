@@ -8,3 +8,8 @@
 
 
 # Tweede idee
+
+
+# Interactie: clicks
+
+# Interactie: keydown

@@ -209,12 +209,6 @@ svg > g:nth-of-type(5) {
 }
 
 
-g:hover {
-    transform-origin: center;
-    transition-property: padding;
-    padding: 0.5em;
-}
-
 
 
 /*  B U T T O N S  */
@@ -421,66 +415,21 @@ svg.heleKruisEvil {
 /*  R E S P O N S I V E  */
 
 /* Laptop */
-@media (min-width: 65em) {
-    body {
-        background-color: #ecedea;
-    }
-
-    body > svg.heleKruis {
-        margin-top: 0em;
-        height: 45em;
-    }
-
-    button {
-        margin-top: -7.4em;
-    }
-
-    body > button.rechts {
-        margin-left: -43em;
-    }
-
-    body > button.links {
-        margin-left: -48em;
-    }
-}
+@media (min-width: 61em) {
+    
 }
 
 /* Tablet */
-@media (min-width: 30em) and (max-width: 65em) {
+@media (min-width: 41em) and (max-width: 60em) {
 
-    body {
-        background-color: #36A9E1;
-    }
-
-    body > svg.heleKruis {
-        margin-top: 1em;
-        height: 35em;
-    }
-
-    button {
-        margin-top: -3em;
-        bottom: 1em;
-    }
-
-    body > button.rechts {
-        margin-left: -2.5em;
-    }
-
-    body > button.links {
-        margin-left: 2.5em;
-    }
 }
 
 /* Telefoon */
-@media (max-width: 30em) {
-
-    body {
-        background-color: #2D2E83;
-    }
+@media (min-width: 20em) and (max-width: 40em) {
 
     body > svg.heleKruis {
         margin-top: 1em;
-        height: 22em;
+        height: 25em;
     }
 
     button {
