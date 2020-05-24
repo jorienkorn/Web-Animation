@@ -250,11 +250,11 @@ body > button {
 }
 
 body > button.rechts {
-    margin-left: -43em;
+    margin-left: -48em;
 }
 
 body > button.links {
-    margin-left: -48em;
+    margin-left: -43em;
 }
 
 

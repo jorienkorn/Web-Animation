@@ -14,7 +14,7 @@ var i;
 
 
 /*de function die uitgevoerd moet worden voor keyboard*/
-function parallex(event) {
+function invertDesktop(event) {
     if (event.keyCode == 73) {
         console.log(event.keyCode);
         heleBody.classList.add('invert');
@@ -24,6 +24,16 @@ function parallex(event) {
         heleBody.classList.remove('invert');
     }
 }
+
+/*de function die uitgevoerd moet worden voor keyboard*/
+function invertMobile1() {
+        heleBody.classList.add('invert');
+}
+
+function invertMobile2() {
+        heleBody.classList.remove('invert');
+}
+
 
 /*de function die uitgevoerd moet worden voor klik links*/
 function klikLinks() {
@@ -68,6 +78,8 @@ function klikRechts() {
 }
 
 /*event definieren en function startten*/
-window.addEventListener('keydown', parallex);
+window.addEventListener('keydown', invertDesktop);
+window.addEventListener('touchstart', invertMobile1);
+window.addEventListener('touchend', invertMobile2);
 buttonLinks.addEventListener('click', klikLinks);
 buttonRechts.addEventListener('click', klikRechts);
