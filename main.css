@@ -419,7 +419,24 @@ svg.heleKruisEvil {
 
 /* Tablet */
 @media (min-width: 60em) (max-width: 70em) {
+    
+    body > svg.heleKruis {
+        margin-top: 1em;
+        height: 35em;
+    }
 
+    button {
+        margin-top: -3em;
+        bottom: 1em;
+    }
+
+    body > button.rechts {
+        margin-left: -2.5em;
+    }
+
+    body > button.links {
+        margin-left: 2.5em;
+    }
 }
 
 /* Telefoon */
@@ -427,7 +444,7 @@ svg.heleKruisEvil {
 
     body > svg.heleKruis {
         margin-top: 1em;
-        height: 25em;
+        height: 22em;
     }
 
     button {
