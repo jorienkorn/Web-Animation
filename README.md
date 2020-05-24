@@ -84,7 +84,16 @@ function klikRechts() {
 }
 ```
 
-In deze function wordt een for loop geactiveerd, deze gaat de hele array aan rectangles die in de HTML staan na. De loop kijkt of de rectangles de class 'st0', 'st1', 'st2', 'st3' of 'st4' bevat en zo ja, vervangt hij deze met de bijbehorende nieuwe class. In CSS staat voor elke class een andere fill aangegeven die past bij het thema en deze wordt vervangen met een ```transition-timing-function: ease``` zodat het smooth verloopt van de ene naar de andere kleur.
+In deze function wordt een for loop geactiveerd, deze gaat de hele array aan rectangles die in de HTML staan na. De loop kijkt of de rectangles de class 'st0', 'st1', 'st2', 'st3' of 'st4' bevat en zo ja, vervangt hij deze met de bijbehorende nieuwe class. In CSS staat voor elke class een andere fill aangegeven die past bij het thema en deze wordt vervangen met een ```transition-timing-function: ease``` zodat het smooth verloopt van de ene naar de andere kleur. Zie in onderstaand voorbeeld hoe ik het heb toegepast: 
+
+```
+.st0holy {
+    fill: #FDCD00;
+    transition-property: fill;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
+```
 
 Hiernaast wordt ook de body aangeroepen om in CSS van achtergrond kleur te veranderen die past bij het thema en door heleKruisHoly aan te roepen activeert het een class met een animation die gebruik maakt van ```@keyframes``` om de indruk te geven dat het kruis zweeft, dit heb ik simpelweg met ```margin-top``` gedaan.
 
