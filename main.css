@@ -413,28 +413,22 @@ svg.heleKruisEvil {
 
 /*  R E S P O N S I V E  */
 
-/* Laptop */
-@media (min-width: 61em) {}
-
 /* Tablet */
-@media (min-width: 41em) and (max-width: 60em) {
+@media only screen and (max-width: 60em) {
 
     body.heleBody.invert > button.links {
-        position: fixed;
         margin-left: 2.5em;
         margin-top: -3em;
         bottom: -6.8em;
     }
 
     body.heleBody.invert > button.rechts {
-        position: fixed;
         margin-left: -2.5em;
         margin-top: -3em;
         bottom: -6.8em;
     }
 
     button {
-        position: fixed;
         margin-top: -3em;
         bottom: 1em;
     }
@@ -459,21 +453,18 @@ svg.heleKruisEvil {
     }
 
     body.heleBody.invert > button.links {
-        position: fixed;
         margin-left: 2.5em;
         margin-top: -3em;
         bottom: -6.8em;
     }
 
     body.heleBody.invert > button.rechts {
-        position: fixed;
         margin-left: -2.5em;
         margin-top: -3em;
         bottom: -6.8em;
     }
 
     button {
-        position: fixed;
         margin-top: -3em;
         bottom: 1em;
     }
