@@ -422,7 +422,7 @@ svg.heleKruisEvil {
 
     body > button {
         margin-top: 70em;
-        left: 32.5em;
+        left: 32.6em;
     }
 
     body > button.rechts {
@@ -440,7 +440,7 @@ svg.heleKruisEvil {
 
     body > svg.heleKruis {
         margin-top: 1em;
-/*        height: 25em;*/
+        height: 25em;
     }
 
 /*
@@ -458,8 +458,8 @@ svg.heleKruisEvil {
 */
 
     body > button {
-        margin-top: -3em;
-        left: 5em;
+        margin-top: 22em;
+        left: 14.5em;
     }
 
     body > button.rechts {
