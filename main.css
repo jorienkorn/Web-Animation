@@ -438,28 +438,10 @@ svg.heleKruisEvil {
 /* Telefoon */
 @media only screen and (max-width: 40em) {
 
-    body {
-        background-color: blueviolet;
-    }
-
     body > svg.heleKruis {
         margin-top: 1em;
         height: 25em;
     }
-
-    /*
-    body.heleBody.invert > button.links {
-        margin-left: 2.5em;
-        margin-top: -3em;
-        bottom: -6.8em;
-    }
-
-    body.heleBody.invert > button.rechts {
-        margin-left: -2.5em;
-        margin-top: -3em;
-        bottom: -6.8em;
-    }
-*/
 
     body > button {
         margin-top: 18em;
@@ -473,4 +455,27 @@ svg.heleKruisEvil {
     body > button.links {
         margin-left: 2.5em;
     }
+
+    
+/*
+    body {
+        background-color: blueviolet;
+    }
+
+
+
+    body.heleBody.invert > button.links {
+        margin-left: 2.5em;
+        margin-top: -3em;
+        bottom: -6.8em;
+    }
+
+    body.heleBody.invert > button.rechts {
+        margin-left: -2.5em;
+        margin-top: -3em;
+        bottom: -6.8em;
+    }
+*/
+
+
 }
