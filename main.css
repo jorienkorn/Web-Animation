@@ -10,8 +10,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow-y: hidden;
-    min-width: 65em;
+    overflow: hidden;
 }
 
 body.heleBody {
@@ -415,17 +414,21 @@ svg.heleKruisEvil {
 /*  R E S P O N S I V E  */
 
 /* Laptop */
-@media (min-width: 61em) {
-    
-}
+@media (min-width: 61em) {}
 
 /* Tablet */
 @media (min-width: 41em) and (max-width: 60em) {
-
+    body {
+        background-color: black;
+    }
 }
 
 /* Telefoon */
 @media (min-width: 20em) and (max-width: 40em) {
+
+    body {
+        background-color: aqua;
+    }
 
     body > svg.heleKruis {
         margin-top: 1em;
