@@ -2,7 +2,7 @@
  
  Ik gebruik voor deze opdracht het volgende [artwork](https://designarchives.aiga.org/#/entries/%2Bcollections%3A%22B.%20Martin%20Pedersen%22/_/detail/relevance/asc/6/7/21993/calendar-promotion-to-designers-december-1968/1):
  
- <img src="Images%2520voor%2520ReadME/gekozen-artwork.jpg" height="200px">
+ <img src="images/gekozen-artwork.jpg" height="200px">
  
  Het artwork is gemaakt door B. Martin Pedersen in 1968. Hij werkt al 40 jaar in grafisch ontwerp, reclame, illustratie en fotografie en heeft in deze tijd voor zijn werk meer dan 300 prijzen gekregen. Over het artwork kon ik niet veel vinden naast een korte beschrijving van bovenstaande bron waar in staat dat het een kruis is waar je een geschenkverpakking van kan maken. 
  
@@ -17,7 +17,7 @@ Omdat ik met mijn achtergrondverhaal en intentie van het artwork al afwijk van h
 # Aan de slag
 
 ## SVG maken
-<img src="Images%2520voor%2520ReadME/Artwork%20in%20Illustrator.png" height="200px"><img src="Images%2520voor%2520ReadME/SVG%20in%20HTML.png" height="200px">
+<img src="images/artwork-in-illu.png" height="200px"><img src="images/svg-in-html.png" height="200px">
 Het artwork namaken in Illustrator was vrij makkelijk, het artwork bestaat namelijk alleen maar uit vierkanten. Ik heb ze gegroepeerd per blok en als geheel zodat ik dit in mijn HTML kan gebruiken om specifieke onderdelen aan te roepen. Ik het artwork geexporteerd als SVG-code en dit in mijn HTML bestand geplakt.
 
 ## Interactie
