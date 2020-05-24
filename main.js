@@ -37,14 +37,10 @@ function blendDesktop(event) {
     }
 }
 
-/*de function die uitgevoerd moet worden voor touch screens*/
+/*de function die uitgevoerd moet worden voor touch screens om invert te activeren*/
 function invertMobile1() {
         heleBody.classList.toggle('invert');
 }
-
-//function invertMobile2() {
-//        heleBody.classList.remove('invert');
-//}
 
 
 /*de function die uitgevoerd moet worden voor klik links*/
@@ -89,7 +85,7 @@ function klikRechts() {
     body.classList.toggle('heleBodyHoly');
 }
 
-/*event definieren en functions startten*/
+/*events definieren en functions activeren*/
 window.addEventListener('keydown', invertDesktop);
 window.addEventListener('keydown', blendDesktop);
 heleKruis.addEventListener('touchstart', invertMobile1);

@@ -19,7 +19,7 @@ Omdat ik met mijn achtergrondverhaal en intentie van het artwork al afwijk van h
 ## SVG maken
 <img src="images/artwork-in-illu.png" height="200px"><img src="images/svg-in-html.png" height="200px">
 
-Het artwork namaken in Illustrator was vrij makkelijk, het artwork bestaat namelijk alleen maar uit vierkanten. Ik heb ze gegroepeerd per blok en als geheel zodat ik dit in mijn HTML kan gebruiken om specifieke onderdelen aan te roepen. Ik het artwork geëxporteerd als SVG-code en dit in mijn HTML bestand geplakt.
+Het artwork namaken in Illustrator was vrij makkelijk, het artwork bestaat namelijk alleen maar uit vierkanten. Ik heb ze gegroepeerd per blok en als geheel zodat ik dit in mijn HTML kan gebruiken om specifieke onderdelen aan te roepen. Ik heb het artwork geëxporteerd als SVG-code en dit in mijn HTML bestand geplakt.
 
 ## Interactie
 * Load/refresh de pagina (inladen elementen)
@@ -30,7 +30,7 @@ Het artwork namaken in Illustrator was vrij makkelijk, het artwork bestaat namel
 
 ### Load/refresh de pagina (inladen elementen)
 <img src="images/artwork-original.jpg" height="200px">
-Omdat ik in Illustrator de blokken had gegroepeerd kon ik deze in CSS aanroepen met ```svg > g:nth-of-type()``` en ze één voor één inladen door ```animation``` en de bijbehorende eigenschappen te gebruiken. Dit heb ik op onderstaande manier gedaan:
+Omdat ik in Illustrator de blokken had gegroepeerd kon ik deze in CSS aanroepen met ```:nth-of-type()``` en ze één voor één inladen door ```animation``` en de bijbehorende eigenschappen te gebruiken. Dit heb ik op onderstaande manier gedaan:
 
 ```
 svg > g:nth-of-type(3) {
@@ -55,7 +55,7 @@ svg > g:nth-of-type(3) {
 }
 ```
 
-Zoals je ziet staat eerst de opacity op 0, doordat de ```animation``` geactiveerd wordt na 100ms verandert de opacity van 0 naar 1 en schuift hij van boven (off-screen) naar beneden door middel van ```transform: translateY```. Zo lijkt het alsof de blokken van boven in de pagina vallen. Van het eerste tot het laatste blok is er steeds een grotere delay zodat ze niet allemaal tegelijk ingeladen worden maar na elkaar vallen.
+Zoals je ziet staat eerst de opacity op 0, doordat de ```animation``` geactiveerd wordt na 100ms verandert de opacity van 0 naar 1 en schuift hij van boven (off-screen) naar beneden door middel van ```transform: translateY```. Zo lijkt het alsof de blokken van boven in de pagina vallen. Van het eerste tot het laatste blok is er steeds een langere delay zodat ze niet allemaal tegelijk ingeladen worden maar na elkaar vallen.
 
 ### Click (holy state)
 <img src="images/artwork-holy.jpg" height="200px">
@@ -111,7 +111,7 @@ function invertDesktop(event) {
 }
 ```
 
-Hier kijkt de code naar of de keycode overeen komt met de keycode van de I of de O, als hij overeen komt met de I wordt de class 'invert' toegevoegd. Deze class zorgt ervoor dat het filter geactiveerd wordt en deze komt over de hele pagina heen. Als de keycode overeen komt met de O wordt de class 'invert' verwijdert en gaat hij dus weer terug naar het de originele kleuren.
+Hier kijkt de code naar of de keycode overeen komt met de keycode van de I of de O, als hij overeen komt met de I wordt de class 'invert' toegevoegd aan de body. Deze class zorgt ervoor dat het filter geactiveerd wordt. Als de keycode overeen komt met de O wordt de class 'invert' verwijdert en gaat hij dus weer terug naar het de originele kleuren.
 
 ### Keyboard (mix-blend-mode)
 <img src="images/mixblendmode.png" height="200px">
@@ -120,13 +120,27 @@ Naast filters had ik ook nog nooit gebruik gemaakt van ```mix-blend-mode```, hie
 
 ## Responsive
 
+### Desktop
+<img src="images/desktop-original.png" height="200px">
+
+Voor de desktop staan de knoppen links omdat er veel ruimte is aan de zijkanten doordat het artwork gecentreerd staat. Ik heb het gecentreerd door middel van  ```display: flex``` en ```justify-content: center```. Voor desktop gebruik heb ik ook een ```:hover``` toegepast op de buttons waar de kleuren veranderen zodat de gebruiker ziet wanneer hij over de knop zweeft. Ik heb bij het zweven over de knop ook de cursor aangepast door ```cursor: pointer``` toe te voegen. Dit was niet per se nodig maar ik wist niet dat dit kon dus ik vond het leuk om uit te proberen.
+
+### Mobile
+<img src="images/mobile-original.png" height="200px"><img src="images/mobile-invert.png" height="200px"><img src="images/mobile-holy.png" height="200px"><img src="images/mobile-evil.png" height="200px">
+
+Om het responsive te maken heb ik de knoppen van links naar onder het artwork verplaatst. Als het onder het artwork staat, vallen de knoppen binnen de thumbzone voor mobiel en is het makkelijker te gebruiken. Om te kunnen inverten op mobiel heb ik in plaats van een keycode gebruik gemaakt van een ```touchstart``` event. Als je klikt op het scherm wordt de class 'invert' toegevoegd.
+
+### Tablet
+<img src="images/tablet-original.PNG" height="200px"><img src="images/tablet-invert.PNG" height="200px"><img src="images/tablet-holy.PNG" height="200px"><img src="images/tablet-evil.PNG" height="200px">
+
+Voor tablet is dezelfde opbouw als mobiel gebruikt, ookal is een tablet te groot voor een thumbzone staat het alsnog mooier om de knoppen onderaan te doen omdat er links en rechts niet veel ruimte meer is zoals op de desktop. Ook hier kan je de class 'invert' toevoegen door op het scherm te klikken.
+
 ## Alles wat nieuw was voor mij op een rijtje
 * Met SVG animeren
 * CSS filters (invert)
 * transform: translateX
 * cursor
-* mix-blend-mode
-
+* mix-blend-mode (color-burn)
 
 # Sources
 * [Informatie B. Martin Pendersen](https://www.aiga.org/medalist-martinpedersen)
