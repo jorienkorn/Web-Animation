@@ -415,36 +415,27 @@ svg.heleKruisEvil {
 
 /* Tablet */
 @media only screen and (max-width: 60em) {
-    
+
+    body > svg.heleKruis {
+        margin-top: 1em;
+    }
+
     body {
-        background-color: blue;
+        background-color: black;
     }
 
-    body.heleBody.invert > button.links {
-        margin-left: 2.5em;
-        margin-top: -3em;
-        bottom: -26em;
-    }
-
-    body.heleBody.invert > button.rechts {
-        margin-left: -2.5em;
-        margin-top: -3em;
-        bottom: -26em;
-    }
-
-    button {
-        margin-top: -22em;
+    body > button {
+        margin-top: 40em;
     }
 
     body > button.rechts {
         margin-left: -2.5em;
-        bottom: 4em;
     }
 
     body > button.links {
         margin-left: 2.5em;
-        bottom: 4em;
     }
+
 }
 
 /* Telefoon */
