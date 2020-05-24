@@ -427,7 +427,7 @@ svg.heleKruisEvil {
 @media only screen and (max-width: 40em) {
 
     body {
-        background-color: blueviolet;
+        background-color: aquamarine;
     }
 
     body > svg.heleKruis {
@@ -435,16 +435,33 @@ svg.heleKruisEvil {
         height: 25em;
     }
 
+    body.heleBody.invert > button.links {
+        position: fixed;
+        margin-left: 2.5em;
+        margin-top: -3em;
+        bottom: -6.8em;
+    }
+
+    body.heleBody.invert > button.rechts {
+        position: fixed;
+        margin-left: -2.5em;
+        margin-top: -3em;
+        bottom: -6.8em;
+    }
+
     button {
+        position: fixed;
         margin-top: -3em;
         bottom: 1em;
     }
 
     body > button.rechts {
         margin-left: -2.5em;
+        bottom: 1em;
     }
 
     body > button.links {
         margin-left: 2.5em;
+        bottom: 1em;
     }
 }
